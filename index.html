@@ -1,19 +1,13 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>XV de Alma Grimberg</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-/* Layout: una columna angosta tipo invitación; la portada reproduce la composición del Story (texto en el cielo, personas abajo) y las secciones siguen como tarjetas sobre noche estrellada. */
 :root {
-  --night: #070d22;
-  --night-2: #0d1838;
-  --ink: #f4f1ea;
-  --ink-dim: #b9c1d9;
-  --gold: #e4b96e;
-  --gold-deep: #d8ac64;
-  --line: rgba(228, 185, 110, .35);
-  --card: rgba(13, 24, 56, .72);
+  --night: #070d22; --night-2: #0d1838; --ink: #f4f1ea; --ink-dim: #b9c1d9;
+  --gold: #e4b96e; --gold-deep: #d8ac64; --line: rgba(228, 185, 110, .35); --card: rgba(13, 24, 56, .72);
   --font-display: "Cinzel", "Trajan Pro", Georgia, serif;
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-body: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -33,89 +27,44 @@ body {
     linear-gradient(180deg, var(--night) 0%, var(--night-2) 50%, var(--night) 100%);
   background-size: 420px 520px, 380px 460px, 500px 600px, 440px 540px, 360px 480px, 520px 620px, auto;
   background-color: var(--night);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 17px;
-  line-height: 1.55;
-  padding-inline: 16px;
-  padding-block: 24px 56px;
+  color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.55;
+  padding-inline: 16px; padding-block: 24px 56px;
 }
 main { max-width: 600px; margin-inline: auto; display: flex; flex-direction: column; gap: 28px; }
 a { color: inherit; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-
-/* ---------- Portada ---------- */
-.cover {
-  container-type: inline-size;
-  position: relative;
-  aspect-ratio: 736 / 1308;
-  width: 100%;
-  background: #0a1330 url("foto.jpg") center / cover no-repeat;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 30px 80px -30px #000c;
-}
-.cover::before {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, #0008 0%, #0005 22%, #0002 38%, transparent 46%);
-}
-.cover::after {
-  content: ""; position: absolute; inset: 3.7cqw; border: 1px solid var(--line); pointer-events: none;
-}
-.cover-text {
-  position: absolute; inset: 0 0 auto 0;
-  padding: 8cqw 8cqw 0;
-  display: flex; flex-direction: column; align-items: center; text-align: center;
-  gap: 1.8cqw;
-}
+.cover { container-type: inline-size; position: relative; aspect-ratio: 736 / 1308; width: 100%;
+  background: #0a1330 url("foto.jpg") center / cover no-repeat; border-radius: 4px; overflow: hidden; box-shadow: 0 30px 80px -30px #000c; }
+.cover::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, #0008 0%, #0005 22%, #0002 38%, transparent 46%); }
+.cover::after { content: ""; position: absolute; inset: 3.7cqw; border: 1px solid var(--line); pointer-events: none; }
+.cover-text { position: absolute; inset: 0 0 auto 0; padding: 8cqw 8cqw 0; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.8cqw; }
 .kicker { font-family: var(--font-display); letter-spacing: .42em; text-transform: uppercase; font-size: 3.4cqw; margin: 0 0 0 .42em; color: var(--ink); }
-.name {
-  font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
-  font-size: 8.4cqw; line-height: 1.05; margin: 0; letter-spacing: .02em;
-  background: linear-gradient(180deg, #f6d99a, #d8ac64 70%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  text-wrap: balance;
-}
+.name { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; font-size: 8.4cqw; line-height: 1.05; margin: 0; letter-spacing: .02em;
+  background: linear-gradient(180deg, #f6d99a, #d8ac64 70%); -webkit-background-clip: text; background-clip: text; color: transparent; text-wrap: balance; }
 .rule { width: 66cqw; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); position: relative; margin-block: .5cqw; }
-.rule::after { content: "✦"; position: absolute; left: 50%; top: 50%; translate: -50% -52%; color: var(--gold); font-size: 3.6cqw; background: transparent; padding-inline: 1.5cqw; text-shadow: 0 0 6px #0a1330, 0 0 6px #0a1330; }
+.rule::after { content: "✦"; position: absolute; left: 50%; top: 50%; translate: -50% -52%; color: var(--gold); font-size: 3.6cqw; padding-inline: 1.5cqw; text-shadow: 0 0 6px #0a1330, 0 0 6px #0a1330; }
 .phrase { font-family: var(--font-serif); font-style: italic; font-size: 4.8cqw; line-height: 1.2; margin: 0 0 1cqw; text-wrap: balance; }
 .cover-line { margin: 0; font-size: 3.7cqw; letter-spacing: .06em; font-weight: 300; }
 .cover-line.addr { letter-spacing: .03em; line-height: 1.5; }
 .cover-line.rsvp { margin-top: 1.4cqw; font-size: 3.3cqw; letter-spacing: .04em; line-height: 1.5; color: var(--ink); }
-
-/* ---------- Secciones ---------- */
-.card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  padding: 32px 24px;
-  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;
-  backdrop-filter: blur(4px);
-}
+.card { background: var(--card); border: 1px solid var(--line); padding: 32px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; backdrop-filter: blur(4px); }
 .eyebrow { font-family: var(--font-display); font-size: 13px; letter-spacing: .38em; text-transform: uppercase; color: var(--gold); margin: 0 0 0 .38em; }
 h2 { font-family: var(--font-serif); font-weight: 400; font-style: italic; font-size: clamp(30px, 8vw, 40px); line-height: 1.1; margin: 0; text-wrap: balance; }
 .big { font-family: var(--font-display); font-weight: 500; font-size: clamp(22px, 6vw, 30px); letter-spacing: .06em; margin: 0; text-wrap: balance; }
 .dim { color: var(--ink-dim); margin: 0; max-width: 34ch; }
 .time { font-family: var(--font-display); font-size: clamp(40px, 12vw, 58px); font-weight: 500; letter-spacing: .08em; color: var(--gold); margin: 0; font-variant-numeric: tabular-nums; }
-
 .countdown { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 420px; margin-top: 6px; }
 .countdown div { border: 1px solid var(--line); padding: 12px 4px 8px; }
 .countdown b { display: block; font-family: var(--font-display); font-weight: 500; font-size: clamp(24px, 7vw, 32px); font-variant-numeric: tabular-nums; color: var(--ink); }
 .countdown span { font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-dim); }
 .countdown-note { font-size: 14px; color: var(--ink-dim); margin: 0; }
-
 .btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 6px; width: 100%; }
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  min-height: 48px; padding: 10px 22px; text-decoration: none; cursor: pointer;
-  font: 500 14px/1.2 var(--font-body); letter-spacing: .16em; text-transform: uppercase;
-  border: 1px solid var(--gold); color: var(--gold); background: transparent;
-  transition: background .2s, color .2s;
-}
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 10px 22px; text-decoration: none; cursor: pointer;
+  font: 500 14px/1.2 var(--font-body); letter-spacing: .16em; text-transform: uppercase; border: 1px solid var(--gold); color: var(--gold); background: transparent; transition: background .2s, color .2s; }
 .btn:hover { background: var(--gold); color: var(--night); }
 .btn.solid { background: var(--gold); color: var(--night); }
 .btn.solid:hover { background: #f1cd8b; }
 .btn.small { min-height: 40px; padding: 6px 14px; font-size: 12px; }
-
 .place { width: 100%; max-width: 420px; aspect-ratio: 16 / 9; border: 1px solid var(--line); position: relative; overflow: hidden;
   background:
     linear-gradient(90deg, transparent 49.6%, #e4b96e26 50%, transparent 50.4%),
@@ -123,28 +72,25 @@ h2 { font-family: var(--font-serif); font-weight: 400; font-style: italic; font-
     linear-gradient(90deg, transparent 24.6%, #e4b96e14 25%, transparent 25.4%, transparent 74.6%, #e4b96e14 75%, transparent 75.4%),
     linear-gradient(0deg, transparent 29.6%, #e4b96e14 30%, transparent 30.4%, transparent 69.6%, #e4b96e14 70%, transparent 70.4%),
     #0a1330;
-  display: grid; place-items: center;
-}
+  display: grid; place-items: center; }
 .pin { width: 28px; height: 28px; background: var(--gold); border-radius: 50% 50% 50% 0; rotate: -45deg; box-shadow: 0 0 0 8px #e4b96e2e, 0 0 30px #e4b96e88; position: relative; }
 .pin::after { content: ""; position: absolute; inset: 9px; background: var(--night); border-radius: 50%; }
 .place small { position: absolute; bottom: 8px; left: 0; right: 0; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-dim); }
-
 .phones { display: flex; flex-direction: column; gap: 12px; width: 100%; align-items: center; }
 .phone-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; }
 .phone { font-family: var(--font-display); font-size: 20px; letter-spacing: .08em; font-variant-numeric: tabular-nums; user-select: all; }
 .deadline { font-family: var(--font-serif); font-style: italic; font-size: clamp(24px, 6.5vw, 30px); color: var(--gold); margin: 0; }
 .ban { margin: 4px 0 0; padding: 8px 18px; border: 1px solid var(--gold); font-family: var(--font-display); font-size: 14px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
 .toast { min-height: 1.4em; font-size: 14px; color: var(--ink-dim); margin: 0; }
-
 footer { text-align: center; padding-top: 12px; color: var(--ink-dim); }
 footer p { margin: 0; }
 footer .phrase { font-size: 22px; color: var(--ink); }
 footer .sig { margin-top: 8px; font-family: var(--font-display); letter-spacing: .3em; font-size: 12px; text-transform: uppercase; color: var(--gold); }
-
 @media (min-width: 640px) { body { padding-block: 48px 80px; } .card { padding: 44px 40px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
 </style>
-
+</head>
+<body>
 <main>
   <section class="cover" aria-label="Invitación">
     <div class="cover-text">
@@ -154,7 +100,7 @@ footer .sig { margin-top: 8px; font-family: var(--font-display); letter-spacing:
       <p class="phrase">Un capítulo para soñar. Una noche estrellada</p>
       <p class="cover-line">Viernes 5 de marzo de 2027 · 21:30 hs</p>
       <p class="cover-line addr">Av. Crisólogo Larralde 1050, Crucecita, Avellaneda<br>(Shopping Alto Avellaneda)</p>
-      <p class="cover-line">Dress code: Formal · Color azul prohibido</p>
+      <p class="cover-line">Dress code: Elegante · Color azul prohibido</p>
       <p class="cover-line rsvp">Confirmar asistencia por WhatsApp antes del 5 de enero<br>11 2254-7936 · 11 5934-8291</p>
     </div>
   </section>
@@ -171,7 +117,7 @@ footer .sig { margin-top: 8px; font-family: var(--font-display); letter-spacing:
     </div>
     <p class="countdown-note" id="cd-note" hidden></p>
     <div class="btns">
-      <a class="btn" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XV+de+Alma+Grimberg&dates=20270306T003000Z/20270306T060000Z&details=Un+cap%C3%ADtulo+para+so%C3%B1ar.+Una+noche+estrellada.+Dress+code%3A+Formal.&location=Av.+Cris%C3%B3logo+Larralde+1050%2C+Crucecita%2C+Avellaneda+(Shopping+Alto+Avellaneda)">Agendar en Google Calendar</a>
+      <a class="btn" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XV+de+Alma+Grimberg&dates=20270306T003000Z/20270306T060000Z&details=Un+cap%C3%ADtulo+para+so%C3%B1ar.+Una+noche+estrellada.+Dress+code%3A+Elegante.&location=Av.+Cris%C3%B3logo+Larralde+1050%2C+Crucecita%2C+Avellaneda+(Shopping+Alto+Avellaneda)">Agendar en Google Calendar</a>
     </div>
   </section>
 
@@ -192,7 +138,7 @@ footer .sig { margin-top: 8px; font-family: var(--font-display); letter-spacing:
 
   <section class="card" id="dresscode" aria-labelledby="t-dress">
     <p class="eyebrow">Dress code</p>
-    <h2 id="t-dress">Formal</h2>
+    <h2 id="t-dress">Elegante</h2>
     <p class="dim">Una noche para vestirse de gala.</p>
     <p class="ban">Color azul prohibido</p>
   </section>
@@ -227,7 +173,6 @@ footer .sig { margin-top: 8px; font-family: var(--font-display); letter-spacing:
 
 <script>
 (function () {
-  // Cuenta regresiva hasta el viernes 5 de marzo de 2027, 21:30 (hora de Buenos Aires, UTC-3)
   var target = Date.parse("2027-03-05T21:30:00-03:00");
   var box = document.getElementById("countdown");
   var note = document.getElementById("cd-note");
@@ -249,7 +194,6 @@ footer .sig { margin-top: 8px; font-family: var(--font-display); letter-spacing:
   }
   if (tick()) setInterval(tick, 1000);
 
-  // Copiar teléfonos
   var toast = document.getElementById("toast");
   var timer;
   function say(msg) { toast.textContent = msg; clearTimeout(timer); timer = setTimeout(function () { toast.textContent = ""; }, 2500); }
@@ -269,5 +213,4 @@ footer .sig { margin-top: 8px; font-family: var(--font-display); letter-spacing:
   });
 })();
 </script>
-
 </body></html>
